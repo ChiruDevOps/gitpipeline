@@ -10,7 +10,7 @@ pipeline {
         }
         stage('Build') {
             steps {
-		nant --version
+		call bat 'nant --version'
                 echo 'Building..'
             }
         }
