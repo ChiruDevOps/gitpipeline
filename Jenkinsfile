@@ -10,7 +10,7 @@ pipeline {
         }
         stage('Build') {
             steps {
-		call 'nant --version'
+		call 'nant --buildfile:hudson.build'
             }
         }
         stage('Test') {
