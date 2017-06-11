@@ -11,7 +11,6 @@ pipeline {
         stage('Build') {
             steps {
 		call bat 'nant --version'
-                echo 'Building..'
             }
         }
         stage('Test') {
