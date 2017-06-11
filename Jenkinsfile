@@ -1,4 +1,4 @@
-pipeline {
+node {
     agent any
 
     stages {
@@ -10,7 +10,7 @@ pipeline {
         }
         stage('Build') {
             steps {
-		call 'nant --buildfile:hudson.build'
+		call bat 'nant --buildfile:hudson.build'
             }
         }
         stage('Test') {
