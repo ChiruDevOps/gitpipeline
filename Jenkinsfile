@@ -2,10 +2,16 @@ pipeline {
     agent any
 
     stages {
-        stage('Build') {
+        stage('Checkout') {
             steps {
                 echo 'SCM checkout..'
 				checkout scm
+            }
+        }
+        stage('Build') {
+            steps {
+		sh "nant --version"
+                echo 'Building..'
             }
         }
         stage('Test') {
