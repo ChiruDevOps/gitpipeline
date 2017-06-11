@@ -10,7 +10,7 @@ pipeline {
         }
         stage('Build') {
             steps {
-		call bat 'nant --version'
+		call 'nant --version'
             }
         }
         stage('Test') {
