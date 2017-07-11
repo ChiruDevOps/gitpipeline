@@ -1,0 +1,15 @@
+<project default="build">
+    <property name="debug" value="false" />
+    <target name="init">
+        <echo message="initializing" />
+    </target>
+    <target name="compile" depends="init">
+        <echo message="compiling with debug = ${debug}" />
+    </target>
+    <target name="build">
+        <property name="debug" value="false" />
+        <call target="compile" />
+        <property name="debug" value="true" />
+        <call target="compile" />
+    </target>
+</project>
